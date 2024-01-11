@@ -77,3 +77,4 @@ tidy.data.wide<-tidy.data%>%
   pivot_wider(names_from = feature,
               values_from = mean.value)
 tidy.data.wide<-tidy.data.wide[colnames(x.named)]
+write.table(tidy.data.wide,file="tidy_data.txt",row.names = FALSE,sep = "\t")
